@@ -6,6 +6,8 @@ Used morgan as middleware and handlebars.js on views.
 
 ## To run the app:
 
+- Create a Cloud Firestore database and generate a private key file for your service account as shown in [official firebase documentation](https://firebase.google.com/docs/admin/setup?hl=es#initialize_the_sdk)
+
 - Set the google credentials file with the keys as an environment variable named CREDS. 
 
 _E.g. command for linux:_
