@@ -6,8 +6,10 @@ Used morgan as middleware and handlebars.js on views.
 
 To run the app:
 
-- Set the google credentials file with the keys as an environment variable named CREDS
+- Set the google credentials file with the keys as an environment variable named CREDS. 
+
 _E.g. command for linux:_
+
 		export CREDS='{
 			"type": "service_account",
 			"project_id": "your-project-id",
