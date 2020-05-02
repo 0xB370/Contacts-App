@@ -6,9 +6,7 @@ require("firebase/firestore");
 
 const admin = require('firebase-admin');
 admin.initializeApp({
-  //credential: admin.credential.applicationDefault()
-  private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-  client_email: process.env.GOOGLE_CLIENT_EMAIL,
+  credential: admin.credential.applicationDefault()
 });
 
 const db = admin.firestore();
