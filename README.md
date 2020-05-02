@@ -4,7 +4,7 @@ CRUD made using the stack: Firebase, Express.js, Node.js.
 
 Used morgan as middleware and handlebars.js on views.
 
-###### To run the app:
+## To run the app:
 
 - Set the google credentials file with the keys as an environment variable named CREDS. 
 
