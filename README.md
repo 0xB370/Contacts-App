@@ -27,4 +27,4 @@ _E.g. command for linux:_
 
 - Run _npm start_.
 
-- Open your browser in _localhost:3000_.
+- Open your browser at _localhost:3000_.
