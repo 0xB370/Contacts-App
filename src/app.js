@@ -1,10 +1,11 @@
 const express = require('express');
-//Morgan es un módulo middleware, es decir que está en el medio de las peticiones que 
-//van al servidor (o sea, es una capa intermedia)
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
+const bodyParser = require('body-parser');
+const cookieParser = require("cookie-parser");
 const app = express();
+
 
 /*********************************** SETTINGS **********************************/
 app.set('port', process.env.PORT || 3000);
@@ -18,12 +19,15 @@ app.set('view engine', '.hbs');
 /********************************* MIDDLEWARES *********************************/
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use(cookieParser());
 
 /*********************************** ROUTES ***********************************/
 app.use(require('./routes/index.js'));
 
 /******************************** STATIC FILES ********************************/
-app.use(express.static(path.join(__dirname, 'public')))
-
+app.use(express.static(path.join(__dirname, '/public')));
+//Esto solucionó el error del tipo MIME
+app.use(express.static(path.join(__dirname, '/views')));
 
 module.exports = app;
