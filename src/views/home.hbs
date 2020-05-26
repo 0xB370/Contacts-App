@@ -7,7 +7,7 @@
         </div>
         <div class="card-footer">
             <div>
-                <form id="loginForm" action="/" method="POST" >
+                <fieldset>
                     <div class="form-group">
                         <input type="text" name="email" id="email" placeholder="E-Mail" class="form-control">
                     </div>
@@ -15,18 +15,15 @@
                         <input type="text" name="password" id="password" placeholder="Password" class="form-control">
                     </div>
                     <div style="display: flex;">
-                        <button id="quickstart-sign-in" class="btn btn-primary" style="width:50%;">
+                        <button id="quickstart-sign-in" onclick="loginApp();" class="btn btn-primary" style="width:50%;">
                             Login
                         </button>
-                        <button id="quickstart-sign-up" class="btn btn-primary" style="width:50%; margin-left:5%" onclick="handleSignUp();">
+                        <button id="quickstart-sign-up" onclick="signUpApp();" class="btn btn-primary" style="width:50%; margin-left:5%">
                             Registrate
                         </button>
                     </div>
-                </form>
-                <script>
-                    var cliente = {{{cliente}}};
-                </script>
-                <script src="js/func.js"></script>
+                </fieldset>
+                <script src="js/funcs.js"></script>
             </div>
         </div>
     </div>
